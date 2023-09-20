@@ -1,0 +1,107 @@
+// abstract
+@import '../scss/abstracts/varibles';
+// bases
+@import '../scss/base/_reset';
+
+.header {
+    background-image: url(../../assets/img/plane.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 475px;
+    &__nav{
+        color: $white;
+        padding: 16px 62px 0px 63px;
+
+    }
+    &__a:hover{
+        text-decoration: underline;
+    }
+    &__logo{}
+    &__more{}
+    &__links{}
+    &__secondary{
+        display: flex;
+        grid-column: 3/6;
+        justify-content: end;
+    }
+    &__select{
+        width: 39px;
+        height: 22px;
+    }
+    &__option{
+        color: $blue;
+
+    }
+    &__desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    &__primary{
+        display: flex;
+        justify-content: end;
+        column-gap: 20px;
+        grid-column: 3/6;
+        grid-row: 2/3;
+    }
+    &__h1{
+        color: $white;
+        font-size: 30px;
+        font-weight: bold;
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    &__div{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 63px;
+    }
+    &__h2{
+        color: $white;
+        font-size: 30px;
+    }
+    &__p{
+        color: $white;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    &__button{
+        height: 50px;
+        width: 233px;
+        border-radius: 50px;
+        background-color: $red;
+        color: $white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+}
+
+@include for-size(phone){
+    .header {
+        .header__desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header__select {
+            width: auto;
+            height: 22px;
+        }
+        .header__div {
+            margin-left: 0;
+            align-items: center;
+            padding: 0 10px;
+        }
+        .header__h2{
+            text-align: center;
+        }
+        .header__p{
+            text-align: center;
+        }
+    }
+}

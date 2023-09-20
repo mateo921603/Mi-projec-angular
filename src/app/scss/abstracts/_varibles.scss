@@ -1,0 +1,29 @@
+/* mixin */
+
+@mixin for-size($size) {
+@if $size == phone {
+    @media (max-width: 600px) {
+    @content;
+    }
+} @else if $size == tablet {
+    @media (max-width: 800px) {
+    @content;
+    }
+} @else if $size == desktop {
+    @media (max-width: 1200px) {
+    @content;
+    }
+}
+}
+
+/* Colores */
+$red: #fb3640;
+$white: #ffffff;
+$black: #000000;
+$blue-dark: #0a246366;
+$grey-medium: #605f5e;
+$grey-dark: #000000ad;
+$grey-course: #707070;
+$blue-dark: #0a2463;
+$blue: #247ba0;
+$grey: #00000029;

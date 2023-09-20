@@ -1,0 +1,65 @@
+// abstract
+@import '../scss/abstracts/varibles';
+// bases
+@import '../scss/base/_reset';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    background-color: $blue-dark;
+    width: 100%;
+    height: 406px;
+
+    @include for-size(phone){
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    &__follow{
+        padding-top: 33px;
+    }
+    &__h2{
+        color: $white;
+        text-align: center;
+        font-weight: 100;
+    }
+    &__img{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+    &__svg{
+        height: 30px;
+        width: 30px;
+    }
+    &__div{ 
+        display: flex;
+        justify-content: space-around;
+        @include for-size(tablet){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 30px;
+        }
+    }
+    &__section{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        
+    }
+    &__h3{
+        color: $red;
+        
+    }
+    &__p{
+        color: $white;
+        height: 100px;
+
+    }
+    &__a{
+        color: $white;
+    }
+
+}
